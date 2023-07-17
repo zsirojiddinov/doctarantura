@@ -30,6 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  json_serializable: ^3.5.1
+  gap: ^2.0.0
+  get: ^4.6.5
+  get_storage: ^2.0.3
+  google_fonts: any
+  flutter_bloc: ^8.1.2
 
 
   # The following adds the Cupertino Icons font to your application.
