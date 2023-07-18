@@ -10,10 +10,11 @@ class DefaultRepository {
     setDefault();
   }
 
-  setDefault() {
-    fileService.writeFile(
+  setDefault() async {
+    var file = await fileService.writeFile(
       Resource.FILE_KIRISH_TILI,
       defaultKirishTili,
     );
+
   }
 }

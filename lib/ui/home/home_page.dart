@@ -29,6 +29,10 @@ class _HomePageState extends State<HomePage> {
           bloc = BlocProvider.of<MainBloc>(ctx);
           return Scaffold(
             appBar: AppBar(
+              centerTitle: true,
+              title: const Text(
+                "doctarantura",
+              ),
               actions: [
                 IconButton(
                   onPressed: () {
@@ -49,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                     controller: textController,
                   ),
                   Button(
-                      text: "onclick",
+                      text: "qidirish",
                       onClick: () {
                         bloc.add(
                           StartEvent(textController.text.toString()),

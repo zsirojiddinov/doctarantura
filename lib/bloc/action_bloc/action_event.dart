@@ -4,3 +4,5 @@ import 'package:flutter/widgets.dart';
 abstract class ActionEvent {}
 
 class AllEvent extends ActionEvent {}
+
+class SetDefault extends ActionEvent {}

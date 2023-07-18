@@ -19,7 +19,6 @@ class MainBloc extends Bloc<MainEvent, MainState> {
 
   FutureOr<void> start(StartEvent event, Emitter<MainState> emit) async {
     print("start");
-    //   DefaultRepository(FileService());
     KirishTiliRepository repository = KirishTiliRepository(FileService());
     var model = await repository.getModel(event.code);
     myText = model.nameUz;

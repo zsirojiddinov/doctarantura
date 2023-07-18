@@ -12,7 +12,7 @@ class KirishTiliRepository {
     var model = KirishTili("", "", "");
     var list = await getKirishList();
     list.map((e) {
-   //   print(e.code);
+      //   print(e.code);
       if (e.code == code) {
         model = e;
       }
@@ -22,11 +22,13 @@ class KirishTiliRepository {
 
   Future<List<KirishTili>> getKirishList() async {
     String file = await fileService.readFile(Resource.FILE_KIRISH_TILI);
+    print(file);
     var split = file.split("\n");
     var myList = <KirishTili>[];
 
     split.map((e) {
       var split2 = e.split("\t");
+    ///  print(split2[0]);
       var model = KirishTili(split2[0], split2[1], split2[2]);
       myList.add(model);
     }).toList();
