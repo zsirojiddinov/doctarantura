@@ -13,14 +13,14 @@ class FileService {
     return File('$path/$fileName');
   }
 
-  Future<File> writeCounter(String fileName, String writeTxt) async {
+  Future<File> writeFile(String fileName, String writeTxt) async {
     final file = await localFile(fileName);
 
     // Write the file
     return file.writeAsString(writeTxt);
   }
 
-  Future<String> readCounter(String fileName) async {
+  Future<String> readFile(String fileName) async {
     try {
       final file = await localFile(fileName);
 
