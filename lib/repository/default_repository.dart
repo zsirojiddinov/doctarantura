@@ -1,4 +1,4 @@
-import 'package:doctarantura/def/default_text.dart';
+import 'package:doctarantura/default/default_text.dart';
 import 'package:doctarantura/service/file_service.dart';
 
 import '../utils/resource.dart';
