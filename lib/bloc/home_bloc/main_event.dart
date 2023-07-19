@@ -10,3 +10,5 @@ class StartEvent extends MainEvent {
 }
 
 class AllEvent extends MainEvent {}
+
+class MatModelEvent extends MainEvent {}

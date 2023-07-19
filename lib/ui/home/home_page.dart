@@ -45,25 +45,34 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            body: Container(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  MyInputField(
-                    controller: textController,
-                  ),
-                  Button(
-                      text: "qidirish",
-                      onClick: () {
-                        bloc.add(
-                          StartEvent(textController.text.toString()),
-                        );
-                      }),
-                  Text(
-                    bloc.myText,
-                    style: textStyle,
-                  ),
-                ],
+            body: SingleChildScrollView(
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    MyInputField(
+                      controller: textController,
+                    ),
+                    Button(
+                        text: "qidirish",
+                        onClick: () {
+                          bloc.add(
+                            StartEvent(textController.text.toString()),
+                          );
+                        }),
+                    Button(
+                        text: "bajar",
+                        onClick: () {
+                          bloc.add(
+                            MatModelEvent(),
+                          );
+                        }),
+                    Text(
+                      bloc.myText,
+                      style: textStyle,
+                    ),
+                  ],
+                ),
               ),
             ),
           );
